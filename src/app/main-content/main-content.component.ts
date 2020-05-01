@@ -1,0 +1,62 @@
+import { Component, OnInit } from '@angular/core';
+interface IStudent {
+  id?:number;
+  firstname: string;
+  lastname: string;
+  course: string;
+}
+@Component({
+  selector: 'main-content',
+  templateUrl: './main-content.component.html',
+  styleUrls: ['./main-content.component.css']
+})
+export class MainContentComponent implements OnInit {
+
+
+  students: Array<IStudent> = [];
+  constructor() {
+    this.students[0] = {
+      id: 1,
+      firstname: 'Ben',
+      lastname: 'Khan',
+      course: 'Programming'
+    }
+    this.students[1] = {
+      id: 1,
+      firstname: 'Ben',
+      lastname: 'Khan',
+      course: 'Programming'
+   }
+   this.students[2] = {
+    id: 1,
+    firstname: 'Ben',
+    lastname: 'Khan',
+    course: 'Programming'
+   }
+   this.students[3] = {
+    id: 1,
+    firstname: 'Ben',
+    lastname: 'Khan',
+    course: 'Programming'
+   
+  }
+  
+  }
+
+
+  ngOnInit(): void {
+  }
+    addStudent() {
+      const student = {
+        id: 1,
+        firstname: 'Ben',
+        lastname: 'Khan',
+        course: 'Programming'
+       
+      };
+      
+      this.students.push(student);
+
+    }
+}
+
